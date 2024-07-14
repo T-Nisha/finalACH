@@ -1,0 +1,152 @@
+/* Add your own styles here */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+    color: #ffef5c; /* Yellowish color for headings */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #ffef5c; /* Yellowish color on hover */
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footer .fab {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.footer .fa-whatsapp {
+    color: #25D366;
+}
+
+.footer .fa-facebook-f {
+    color: #3b5998;
+}
+
+.footer .fa-twitter {
+    color: #1DA1F2;
+}
+
+.footer .fa-instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F77737, #FCAF45, #FFDC80);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer .fa-linkedin-in {
+    color: #0077b5;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+    text-align: center;
+    color: #ffef5c; /* Yellowish color for footer text */
+}
+
+.footer a {
+    display: flex;
+    align-items: center;
+}
+
+/* Quick Links, Useful Links, and Resources sections */
+.footer ul li a i {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.footer ul li a:hover i {
+    transform: scale(1.2);
+}
+
+/* Colorful icons for specific options */
+.footer .fa-home {
+    color: #FFA500; /* Orange */
+}
+
+.footer .fa-info-circle {
+    color: #FF4500; /* OrangeRed */
+}
+
+.footer .fa-envelope {
+    color: #FF6347; /* Tomato */
+}
+
+.footer .fa-user-secret {
+    color: #9400D3; /* DarkViolet */
+}
+
+.footer .fa-file-contract {
+    color: #8A2BE2; /* BlueViolet */
+}
+
+.footer .fa-newspaper {
+    color: #FFD700; /* Gold */
+}
+
+.footer .fa-blog {
+    color: #ADFF2F; /* GreenYellow */
+}
+
+.footer .fa-images {
+    color: #7FFF00; /* Chartreuse */
+}
+
+.footer .fa-book {
+    color: #00FF7F; /* SpringGreen */
+}
+
+.footer .fa-question-circle {
+    color: #FF00FF; /* Magenta */
+}
+
+/* Colorful icons for resource options */
+.footer .fa-seedling {
+    color: #228B22; /* ForestGreen */
+}
+
+.footer .fa-paw {
+    color: #DAA520; /* GoldenRod */
+}
+
+.footer .fa-chart-line {
+    color: #DC143C; /* Crimson */
+}
+
+.footer .fa-cloud-sun {
+    color: #FFA500; /* Orange */
+}
+
+.footer .fa-recycle {
+    color: #32CD32; /* LimeGreen */
+}

@@ -1,0 +1,28 @@
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #4caf50; /* Match the navbar color if needed, or choose a contrasting background */
+  }
+  
+  .marquee-content {
+    white-space: nowrap;
+    animation: marquee 18s linear infinite;
+  }
+  
+  .marquee-content h1 {
+    display: inline;
+    font-size: 2.5rem;
+    color: #ffffff; /* White color to contrast with the green background */
+    text-shadow: 2px 2px 4px rgb(0 51 143);
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

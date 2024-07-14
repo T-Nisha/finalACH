@@ -1,0 +1,47 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<div class="container" style="margin: 5%;">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th colspan="9" class="text-center">
+                        <h3>Farmer Details</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="col">Reg. ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email-Id</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let farmerData of farmer | async">
+                    <td>{{farmerData.id}}</td>
+                    <td>{{farmerData.fullName}}</td>
+                    <td>{{farmerData.address}}</td>
+                    <td>{{farmerData.gender}}</td>
+                    <td>{{farmerData.phone}}</td>
+                    <td>{{farmerData.email}}</td>
+                    <td>{{farmerData.userName}}</td>
+                    <td>{{farmerData.password}}</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <button (click)="deleteFarmer(farmerData.id)" class="btn btn-danger btn-sm">Delete</button>
+                            <button (click)="findFarmer(farmerData.id)" class="btn btn-info btn-sm">View</button>
+                            <button [routerLink]="'/updateFarmer/' + farmerData.userName" class="btn btn-warning btn-sm">Update</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.success-dialog, .error-dialog, .confirm-dialog {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+}
+
+.success {
+  color: #4caf50;
+}
+
+.error {
+  color: #ff0000;
+}
+
+.confirm {
+  color: #ab00b1;
+}
+
+.success-dialog button, .error-dialog button, .confirm-dialog button {
+  margin-top: 10px;
+}
+
+.confirm-dialog button {
+  margin-right: 10px;
+}

@@ -1,0 +1,36 @@
+<!-- developers.component.html -->
+
+<section class="developers">
+  <div class="developer-card" *ngFor="let developer of developers">
+    <div class="card">
+      <img [src]="'../../../assets/developer-img' + developer.id + '.jpg'" alt="Developer Image" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ developer.name }}</h5>
+        <p class="card-text">{{ developer.bio }}</p>
+        <h6 class="card-subtitle mb-2 text-muted">Contacts</h6>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let contact of developer.contacts">
+            <span *ngIf="contact.name === 'Email'">
+              {{ contact.name }} - <a [href]="'mailto:' + contact.description">{{ contact.description }}</a> <br>
+            </span>
+            <span *ngIf="contact.name === 'LinkedIn'">
+              {{ contact.name }} -  <a [href]="contact.description" target="_blank">View Profile</a> <br>
+            </span>
+            <span *ngIf="contact.name === 'Mobile No.'">
+              {{ contact.name }} - <a [href]="'tel:' + contact.description">{{ contact.description }}</a> <br>
+            </span>
+            <span *ngIf="contact.name !== 'Email' && contact.name !== 'LinkedIn' && contact.name !== 'Mobile No.'">
+              {{ contact.name }} - {{ contact.description }} <br>
+            </span>
+          </li>
+        </ul>
+        <h6 class="card-subtitle mb-2 text-muted">Qualification</h6>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let qual of developer.qualification">
+            {{ qual.name }} - {{ qual.description }} <br>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

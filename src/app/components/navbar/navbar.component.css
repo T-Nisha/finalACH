@@ -1,0 +1,44 @@
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 80px; /* Adjusted to make room for fixed navbar */
+   /* background-color: rgba(255, 255, 255, 0.9);  White background with some transparency */
+}
+
+.navbar {
+    background-color: #28a745; /* Green background color */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.navbar-brand {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d4d4d4 !important;
+}
+
+.dropdown-menu {
+    background-color: #28a745; /* Match dropdown with navbar */
+}
+
+.dropdown-item {
+    color: #fff !important;
+}
+
+.dropdown-item:hover {
+    background-color: #218838;
+    color: #fff;
+}

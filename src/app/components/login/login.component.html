@@ -1,0 +1,27 @@
+<div id="login-container">
+    <form id="login-form" (ngSubmit)="login()">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" required>
+        <label for="password">Password:</label>
+        <div class="password-container">
+            <input type="password" id="password" [(ngModel)]="password" name="password" required>
+            <i class="far fa-eye" (click)="togglePasswordVisibility()"></i>
+            <i class="far fa-eye-slash" (click)="togglePasswordVisibility()"></i>
+        </div>
+        <div class="role-container">
+            <label for="role">Role: </label>
+            <select id="role" name="role" [(ngModel)]="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Farmer">Farmer</option>
+                <option value="Contractor">Contractor</option>
+                <option value="Retailer">Retailer</option>
+                <option value="Labour">Labour</option>
+            </select>
+        </div>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a routerLink="/register">Register here</a></p>
+        <p>Can't remember password? <a routerLink="/forgot-password">Forgot Password</a></p>
+    </form>
+</div>

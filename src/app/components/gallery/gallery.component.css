@@ -1,0 +1,44 @@
+/* Ensure the component takes full viewport height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    overflow: hidden; /* Hide any overflow content */
+    background-color: #f0f0f0; /* Optional background color */
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scale the image to cover the container */
+  }
+  
+  .image p {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  

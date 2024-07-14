@@ -1,0 +1,117 @@
+/* Ensure the body and html take full height */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Center the login form */
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    padding: 20px;
+    /* background-color: #f0f0f0; Light background for contrast */
+    background-image: url('../../../assets/farmers-market-1920-x-1080-wallpaper-vxpiu0ioogdlimz6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: solid 5px #ff5b00;
+    border-radius: 8px;
+    text-shadow: 0 0 #000000;
+    box-shadow: 0 0 28px rgb(138 93 235);
+    background-color: rgb(150 255 239 / 50%);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 11px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 27px;
+    cursor: pointer;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.password-container {
+    position: relative;
+}
+
+#password {
+    width: calc(100% - 40px); /* Adjusted width for the eye icon */
+    padding-right: 40px; /* Space for the eye icon */
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    display: none; /* Initially hide the eye slash icon */
+}
+
+.password-container {
+    position: relative;
+}
+
+#password {
+    width: calc(105% - 40px); /* Adjusted width for the eye icon */
+    padding-right: 40px; /* Space for the eye icon */
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    display: none; /* Initially hide the eye slash icon */
+}
+
+.role-container {
+    margin-top: 10px; /* Adjust as needed */
+    width: 100%; /* Ensure full width within parent container */
+    max-width: 300px; /* Example max-width */
+    text-align: center;
+}

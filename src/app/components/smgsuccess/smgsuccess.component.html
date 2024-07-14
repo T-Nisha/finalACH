@@ -1,0 +1,15 @@
+<div [ngClass]="{
+  'success-dialog': data.messageType === 'success', 
+  'error-dialog': data.messageType === 'error', 
+  'confirm-dialog': data.messageType === 'confirm'
+}">
+  <h2 *ngIf="data.messageType === 'success'" class="success">Success!</h2>
+  <h2 *ngIf="data.messageType === 'error'" class="error">Error!</h2>
+  <h2 *ngIf="data.messageType === 'confirm'" class="confirm">Confirmation</h2>
+  <p>{{ data.message }}</p>
+  <button *ngIf="data.messageType !== 'confirm'" mat-button (click)="closeDialog()">Okay</button>
+  <div *ngIf="data.messageType === 'confirm'">
+    <button mat-button (click)="closeDialog(true)">Yes</button>
+    <button mat-button (click)="closeDialog(false)">No</button>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+/* Ensure the body and html take full height */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Center the register form */
+#register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background for contrast */
+    background-image: url('../../../assets/contractor-registration.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: solid 5px #ff5b00;
+    border-radius: 8px;
+    text-shadow: 0 0 #000000;
+    box-shadow: 0 0 28px rgb(138 93 235);
+    background-color: rgba(201, 191, 191, 0.5); /* Transparent background */
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 11px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 27px;
+    cursor: pointer;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.password-container {
+    position: relative;
+}
+
+#password {
+    width: calc(100% - 40px); /* Adjusted width for the eye icon */
+    padding-right: 40px; /* Space for the eye icon */
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    display: none; /* Initially hide the eye slash icon */
+}
+
+/* Styles for multiple resources */
+.resource-list-container {
+    margin-bottom: 15px;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.resource-item input {
+    flex: 1;
+}
+
+.resource-item button {
+    margin-left: 10px;
+    background-color: #dc3545; /* Red color for remove button */
+}
+
+.resource-item button:hover {
+    background-color: #c82333;
+}
+
+.add-resource-button {
+    background-color: #28a745; /* Green color for add button */
+}
+
+.add-resource-button:hover {
+    background-color: #218838;
+}

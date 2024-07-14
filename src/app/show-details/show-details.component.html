@@ -1,0 +1,30 @@
+<!-- show-details.component.html -->
+<div *ngIf="loading" class="loading">
+  <div class="spinner-container">
+    <div class="spinner"></div>
+    <div class="spinner-text">{{ loadingPercentage }}%</div>
+  </div>
+</div>
+
+<div class="related-posts">
+  <h3>Related Posts</h3>
+</div>
+
+<div *ngIf="!loading" class="card-container">
+  <div class="card" *ngFor="let detail of details">
+    <img [src]="getImageUrl(detail)" alt="Image">
+    <div class="card-body">
+      <h5 class="card-text">{{ detail.description }}</h5>
+      <h5 class="card-title">{{ detail.mobileNumber }}</h5>
+      <button class="btn btn-call" (click)="call(detail.mobileNumber)">
+        <i class="fas fa-phone-alt"></i> Call
+      </button>
+      <button class="btn btn-message" (click)="message(detail.mobileNumber, detail.description)">
+        <i class="fas fa-sms"></i> Message
+      </button>
+      <button class="btn btn-delete" (click)="deleteDetail(detail.id)">
+        <i class="fas fa-trash"></i> Delete
+      </button>
+    </div>
+  </div>
+</div>

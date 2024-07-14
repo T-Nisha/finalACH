@@ -1,0 +1,44 @@
+<!-- contractor-dashboard.component.html -->
+<div class="toolbar">
+  <h1 class="title">Contractor Dashboard</h1>
+
+  <div class="dropdown">
+    <button class="dropbtn">
+      View <span class="arrow-down">▼</span>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/loaddata">Load Data</a>
+      <a href="#">Contractors</a>
+      <a href="#">Retailer</a>
+      <a routerLink="/labour-registration">Labour</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">
+      View <span class="arrow-down">▼</span>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/insert-details">Post Resources</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">
+      <span class="icon-container">
+        <i class="fas fa-user"></i>
+      </span>
+      {{ userName }} <span class="arrow-down">▼</span>
+    </button>
+    <div class="dropdown-content">
+      <!-- <a *ngIf="contractorUsername !== null" [routerLink]="['/updateContractor', contractorUsername]">Profile</a> -->
+      <a [routerLink]="['/updateContractor', userName]">Profile</a>
+
+      
+      <a (click)="logout()">Logout</a>
+    </div>
+  </div>
+</div>
+
+
+

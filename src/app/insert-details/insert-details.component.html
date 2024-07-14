@@ -1,0 +1,11 @@
+<div class="container">
+<form [formGroup]="detailsForm" (ngSubmit)="onSubmit()" class="details-form">
+  <h1> Post Resources </h1>
+  <input type="file" (change)="onFileChange($event)" class="form-control" />
+  <input formControlName="mobileNumber" placeholder="Mobile Number" class="form-control" />
+  <textarea formControlName="description" placeholder="Description" class="form-control"></textarea>
+  <!-- You can choose to hide or pre-fill the contractor field if needed -->
+  <input formControlName="contractor" placeholder="Contractor" style="display: none;" />
+  <button type="submit" class="btn-submit">Submit</button>
+</form>
+</div>

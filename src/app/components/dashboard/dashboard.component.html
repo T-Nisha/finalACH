@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Welcome, {{ userName }}</h2>
+  <button (click)="logout()">Logout</button>
+  <button (click)="openModal()">Add Detail</button>
+
+  <div *ngIf="isModalOpen" class="modal show">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <form (submit)="onSubmit(); $event.preventDefault();">
+        <label for="image">Image:</label>
+        <input type="file" id="image" (change)="onFileChange($event)" required>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="detail.description" required></textarea>
+        
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" [(ngModel)]="detail.contact" required>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let detail of userDetailsList; let i = index" class="col-md-3 mb-3">
+      <div class="card">
+        <img [src]="detail.image" class="card-img-top" alt="Detail Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ detail.description }}</h5>
+          <p class="card-text">Contact: {{ detail.contact }}</p>
+          <button (click)="deleteDetail(i)" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

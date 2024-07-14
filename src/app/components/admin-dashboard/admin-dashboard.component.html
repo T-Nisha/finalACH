@@ -1,0 +1,46 @@
+<div class="toolbar">
+    <h1 class="title">Admin Dashboard</h1>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">
+            Register <span class="arrow-down">▼</span>
+        </button>
+        <div class="dropdown-content">
+            <a routerLink="/farmer-registration">Farmers</a>
+            <a routerLink="/contractor-registration">Contractors</a>
+            <a href="#">Retailer</a>
+            <a routerLink="/labour-registration">Labour</a>
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">
+            View User<span class="arrow-down">▼</span>
+        </button>
+        <div class="dropdown-content">
+            <a routerLink="/show-farmer">View Farmers</a>
+            <a routerLink="/show-contractor">View Contractors</a>
+            <a href="#">View Retailer</a>
+            <a href="#">View Labour</a>
+        </div>
+    </div>
+
+   
+    <div class="dropdown">
+        <button class="dropbtn">
+            <span class="icon-container">
+                <i class="fas fa-user"></i>
+            </span> {{ userName }}
+            <span class="arrow-down">▼</span>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a (click)="logout()">Logout</a>
+        </div>
+    </div>
+
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
